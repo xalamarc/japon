@@ -1,0 +1,578 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Space Mono', monospace;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --kamakura-red-primary: rgba(115, 29, 14);
+  --kamakura-red-secondary: rgb(65, 10, 11);
+  --kamakura-green-primary: rgb(104, 98, 12);
+  --kamakura-green-secondary: rgb(43, 43, 10);
+  --kamakura-white-primary: rgb(239, 215, 172);
+  --kamakura-white-secondary: rgb(237, 231, 206);
+  --fuji-white-primary: rgb(231, 251, 250);
+  --fuji-pink-primary: rgb(252, 228, 249);
+  --fuji-pink-secondary: rgb(250, 126, 126);
+  --fuji-black-primary: rgb(21, 46, 77);
+  --fuji-blue-primary: rgb(43, 165, 202);
+  --fuji-green-primary: rgb(210, 224, 85);
+  --fuji-green-secondary: rgb(151, 160, 49);
+  --aomori-white-primary: rgb(236, 236, 234);
+  --aomori-white-secondary: rgb(200, 208, 213);
+  --aomori-green-primary: rgb(40, 119, 103);
+  --aomori-green-secondary: rgb(16, 57, 77);
+  --aomori-red-primary: rgb(219, 105, 100);
+  --tokio-blue-thirsty: rgb(156, 75, 177);
+  --tokio-blue-secondary: rgb(39, 0, 85);
+  --tokio-white-primary: rgb(250, 250, 250);
+  --tokio-black-primary: rgb(0, 0, 0);
+  --tokio-blue-primary: rgb(77, 139, 248);
+}
+
+body {
+  background: #202023;
+}
+/**********/
+/*header*/
+/**********/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+.hamburger {
+  background: var(--kamakura-white-primary);
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #333;
+}
+.nav-menu {
+  position: fixed;
+  right: 100%;
+  top: 0rem;
+  background-color: var(--kamakura-white-primary);
+  width: 20%;
+  height: 100vh;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.nav-menu.active {
+  right: 0;
+}
+
+.nav-item p {
+  position: absolute;
+  top: 55%;
+  margin: 20px 50px 10px 70px;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.nav-item img {
+  position: absolute;
+  top: 20%;
+  left: 12%;
+  padding: auto;
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+body {
+  scroll-behavior: smooth;
+}
+
+/******************************/
+/*Main*/
+/******************************/
+.main_section {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100vh;
+  margin-top: 200px;
+}
+.main_title {
+  position: absolute;
+  top: 0;
+  font-size: 10rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  color: var(--kamakura-white-primary);
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 60%;
+  height: auto;
+  padding-bottom: 300px;
+}
+.buttons .b {
+  padding: 20px;
+}
+.button_kamakura a {
+  display: block;
+  font-size: 2rem;
+  border-radius: 10px;
+  padding: 20px 40px;
+  background-color: var(--kamakura-red-primary);
+  color: var(--kamakura-white-primary);
+}
+.button_kamakura a:hover {
+  box-shadow: 10px 10px rgb(65, 10, 11);
+}
+.button_fuji a {
+  display: block;
+  font-size: 2rem;
+  border-radius: 10px;
+  padding: 20px 40px;
+  background-color: var(--fuji-white-primary);
+  color: var(--kamakura-blue-primary);
+}
+.button_fuji a:hover {
+  box-shadow: 10px 10px rgb(40, 145, 177);
+}
+.button_aomori a {
+  display: block;
+  font-size: 2rem;
+  border-radius: 10px;
+  padding: 20px 40px;
+  background-color: var(--aomori-white-primary);
+  color: #333;
+}
+.button_aomori a:hover {
+  box-shadow: 10px 10px rgb(200, 208, 213);
+}
+.button_tokio a {
+  display: block;
+  font-size: 2rem;
+  border-radius: 10px;
+  padding: 20px 40px;
+  background-color: var(--tokio-blue-primary);
+  color: var(--tokio-white-primary);
+}
+.button_tokio a:hover {
+  box-shadow: 10px 10px rgb(105, 47, 107);
+}
+
+/*********************************************/
+/*kamakura*/
+/*********************************************/
+.kamakura {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--kamakura-white-primary);
+}
+.kamakura_left {
+  position: absolute;
+  max-width: 50%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.kamakura_title {
+  background-color: var(--kamakura-green-primary);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 120px 200px;
+  z-index: 2;
+}
+.kamakura_title p {
+  font-size: 3rem;
+  padding: 20px 50px;
+  font-weight: lighter;
+  color: var(--kamakura-white-secondary);
+  box-shadow: 10px 10px rgb(43, 43, 10);
+}
+
+.kamakura_content {
+  background-color: var(--kamakura-red-primary);
+  box-shadow: 10px 10px var(--kamakura-red-secondary);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  top: 150px;
+  left: 240px;
+  width: 350px;
+  height: 500px;
+}
+.kamakura_content p {
+  padding: 50px;
+  line-height: 20px;
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: var(--kamakura-white-secondary);
+}
+
+.kamakura_right {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kamakura_right img {
+  margin-top: 150px;
+  width: 700px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.kamakura_extra_info {
+  background-color: var(--kamakura-green-secondary);
+  margin-top: 50px;
+  width: 700px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kamakura_extra_info p {
+  padding: 20px;
+  color: var(--kamakura-white-primary);
+  font-size: 1.7rem;
+}
+.kamakura_extra_info a {
+  text-decoration: underline;
+  color: var(--kamakura-white-primary);
+  font-size: 1.7rem;
+}
+
+/*********************************************/
+/*fuji*/
+/*********************************************/
+.fuji {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--fuji-white-primary);
+}
+.fuji_left {
+  position: absolute;
+  max-width: 50%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fuji_title {
+  background-color: var(--fuji-pink-primary);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 120px 200px;
+  z-index: 2;
+}
+.fuji_title p {
+  font-size: 3rem;
+  padding: 20px 50px;
+  font-weight: lighter;
+  color: var(--fuji-blue-secondary);
+  box-shadow: 10px 10px rgb(250, 126, 126);
+}
+
+.fuji_content {
+  background-color: var(--fuji-green-primary);
+  box-shadow: 10px 10px var(--fuji-green-secondary);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  top: 150px;
+  left: 240px;
+  width: 350px;
+  height: 500px;
+}
+.fuji_content p {
+  padding: 50px;
+  line-height: 20px;
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: var(--fuji-blue-secondary);
+}
+
+.fuji_right {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fuji_right img {
+  margin-top: 150px;
+  width: 700px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.fuji_extra_info {
+  background-color: var(--fuji-blue-primary);
+  margin-top: 50px;
+  width: 700px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fuji_extra_info p {
+  padding: 20px;
+  color: var(--fuji-blue-secondary);
+  font-size: 1.7rem;
+}
+.fuji_extra_info a {
+  text-decoration: underline;
+  color: var(--fuji-blue-secondary);
+  font-size: 1.7rem;
+}
+
+/*********************************************/
+/*aomori*/
+/*********************************************/
+.aomori {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--aomori-white-primary);
+}
+.aomori_left {
+  position: absolute;
+  max-width: 50%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aomori_title {
+  background-color: #333;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 120px 200px;
+  z-index: 2;
+}
+.aomori_title p {
+  font-size: 3rem;
+  padding: 20px 50px;
+  font-weight: lighter;
+  color: var(--aomori-white-primary);
+}
+
+.aomori_content {
+  background-color: var(--aomori-green-primary);
+  box-shadow: 10px 10px var(--aomori-green-secondary);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  top: 150px;
+  left: 240px;
+  width: 350px;
+  height: 500px;
+}
+.aomori_content p {
+  padding: 50px;
+  line-height: 20px;
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: #333;
+}
+
+.aomori_right {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aomori_right img {
+  margin-top: 150px;
+  width: 700px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.aomori_extra_info {
+  background-color: var(--aomori-red-primary);
+  margin-top: 50px;
+  width: 700px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aomori_extra_info p {
+  padding: 20px;
+  font-size: 1.7rem;
+  color: #333;
+}
+.aomori_extra_info a {
+  text-decoration: underline;
+  color: #333;
+  font-size: 1.7rem;
+}
+/*********************************************/
+/*tokio*/
+/*********************************************/
+.tokio {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--tokio-black-primary);
+}
+.tokio_left {
+  position: absolute;
+  max-width: 50%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tokio_title {
+  background-color: var(--tokio-blue-primary);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 120px 200px;
+  z-index: 2;
+}
+.tokio_title p {
+  font-size: 3rem;
+  padding: 20px 50px;
+  font-weight: lighter;
+  color: var(--tokio-white-primary);
+}
+
+.tokio_content {
+  background-color: var(--tokio-blue-thirsty);
+  box-shadow: 10px 10px var(--tokio-blue-secondary);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  top: 150px;
+  left: 240px;
+  width: 350px;
+  height: 500px;
+}
+.tokio_content p {
+  padding: 50px;
+  line-height: 20px;
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: var(--tokio-white-primary);
+}
+
+.tokio_right {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tokio_right img {
+  margin-top: 150px;
+  width: 700px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.tokio_extra_info {
+  margin-top: 50px;
+  width: 700px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tokio_extra_info p {
+  padding: 20px;
+  font-size: 1.7rem;
+  color: #fff;
+}
+.tokio_extra_info a {
+  text-decoration: underline;
+  color: #fff;
+  font-size: 1.7rem;
+}
